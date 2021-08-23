@@ -5,7 +5,7 @@ import { useSelector } from "react-redux";
 export const ListItem = (props) => {
   return (
     <div className="list-item">
-      <div style={{ marginRight: "50px" }}>
+      <div className="list-item-title">
         {useSelector((state) => state[props.index].name)}
       </div>
       <button

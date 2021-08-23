@@ -1,10 +1,6 @@
-const initialState = [
-  { id: 1, name: "Pudge" },
-  { id: 2, name: "Lina" },
-  { id: 3, name: "ShadowShaman" },
-];
+import { persistedState } from "../store";
 
-export const listReducer = (state = initialState, action) => {
+export const listReducer = (state = persistedState, action) => {
   switch (action.type) {
     case "ADD_HERO":
       return [...state, { id: state.length + 1, name: action.payload }];
